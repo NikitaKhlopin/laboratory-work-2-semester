@@ -4,14 +4,14 @@ using namespace std;
 
 struct students
 {
-	string name; // Фамилия
-	string surname; // Имя
-    string surname3; // Отчество
-	string nomertel; // Номер телефона
-	int group; // Номер группы
-	int mark1; // Оценка1
-	int mark2; // Оценка2
-	int mark3; // Оценка3
+	string name; // Р¤Р°РјРёР»РёСЏ
+	string surname; // РРјСЏ
+    string surname3; // РћС‚С‡РµСЃС‚РІРѕ
+	string nomertel; // РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°
+	int group; // РќРѕРјРµСЂ РіСЂСѓРїРїС‹
+	int mark1; // РћС†РµРЅРєР°1
+	int mark2; // РћС†РµРЅРєР°2
+	int mark3; // РћС†РµРЅРєР°3
 };
 
 int main()
@@ -23,21 +23,21 @@ int main()
 	string otvet;
 	int i = 0, N, k = 1, j;
 	char l;
-	while ( otvet!= "Нет")
+	while ( otvet!= "РќРµС‚")
 	{
-		cout << "Введите  фамилию, имя и отчество: ";
+		cout << "Р’РІРµРґРёС‚Рµ  С„Р°РјРёР»РёСЋ, РёРјСЏ Рё РѕС‚С‡РµСЃС‚РІРѕ: ";
 		cin >> student[i].surname >> student[i].name >> student[i].surname3;
 
-		cout << "Введите номер телефона ";
+		cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° ";
 		cin >> student[i].nomertel;
 
-		cout << "Введите номер группы: ";
+		cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РіСЂСѓРїРїС‹: ";
 		cin >> student[i].group;
 
-		cout << "Введите оценки студента: ";
+		cout << "Р’РІРµРґРёС‚Рµ РѕС†РµРЅРєРё СЃС‚СѓРґРµРЅС‚Р°: ";
 		cin >> student[i].mark1>> student[i].mark2>> student[i].mark3;		
 		
-		cout << "Хотите ли вы продолжить (Да / Нет)? ";
+		cout << "РҐРѕС‚РёС‚Рµ Р»Рё РІС‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ (Р”Р° / РќРµС‚)? ";
 		cin >> otvet;
 
 		i++;
@@ -49,13 +49,13 @@ int main()
 
 	{
 
-		cout << "Фамилия Имя Отчество| " << student[i].surname << " " << student[i].name << " " << student[i].surname3 << endl;
+		cout << "Р¤Р°РјРёР»РёСЏ РРјСЏ РћС‚С‡РµСЃС‚РІРѕ| " << student[i].surname << " " << student[i].name << " " << student[i].surname3 << endl;
 
-		cout << "Номер телефона| " << student[i].nomertel<< endl;
+		cout << "РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°| " << student[i].nomertel<< endl;
 
-		cout << "Группа| " << student[i].group<< endl;
+		cout << "Р“СЂСѓРїРїР°| " << student[i].group<< endl;
 
-		cout << "Оценки| " << student[i].mark1<< student[i].mark2<< student[i].mark3 << endl;
+		cout << "РћС†РµРЅРєРё| " << student[i].mark1<< student[i].mark2<< student[i].mark3 << endl;
 
 	}
 	system("pause");
@@ -66,11 +66,11 @@ int main()
 	float s;
 	int  d;
 	
-	cout << "Введите номер группы, из которой хотите удалить: ";
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РіСЂСѓРїРїС‹, РёР· РєРѕС‚РѕСЂРѕР№ С…РѕС‚РёС‚Рµ СѓРґР°Р»РёС‚СЊ: ";
 	cin >> d;   
 	cout << endl;
 	
-	cout << "Введите среднее арифметическое: ";
+	cout << "Р’РІРµРґРёС‚Рµ СЃСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: ";
 	cin >> s;  
 	cout << endl;  
 	
@@ -95,13 +95,13 @@ int main()
 		{
 			student_sort[j] = student[i];
 
-			cout << "Фамилия Имя Отчество| " << student_sort[j].surname << " " << student_sort[j].name << " " << student_sort[j].surname3 << endl;
+			cout << "Р¤Р°РјРёР»РёСЏ РРјСЏ РћС‚С‡РµСЃС‚РІРѕ| " << student_sort[j].surname << " " << student_sort[j].name << " " << student_sort[j].surname3 << endl;
 
-			cout << "Номер телефона| " << student_sort[j].nomertel<<endl;
+			cout << "РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°| " << student_sort[j].nomertel<<endl;
 
-			cout << "Группа| " << student_sort[j].group<< endl;
+			cout << "Р“СЂСѓРїРїР°| " << student_sort[j].group<< endl;
 
-			cout << "Три оценки| " << student_sort[j].mark1<<" "<< student_sort[j].mark2<<" "<< student_sort[j].mark3 << endl;
+			cout << "РўСЂРё РѕС†РµРЅРєРё| " << student_sort[j].mark1<<" "<< student_sort[j].mark2<<" "<< student_sort[j].mark3 << endl;
 
 			j++;
 		}
@@ -110,7 +110,7 @@ int main()
 	bool F = false;
 	while (F == false)
 	{
-		cout << "Введите фамилию, после которой нужно добавить элемент: ";
+		cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ, РїРѕСЃР»Рµ РєРѕС‚РѕСЂРѕР№ РЅСѓР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚: ";
 		cin >> otvet;
 
 		i = 0;
@@ -122,35 +122,35 @@ int main()
 	}
 	system("cls");
 	k = i;
-	cout << "N=" << N << endl << endl; //Кол-во оставшихся студентов
+	cout << "N=" << N << endl << endl; //РљРѕР»-РІРѕ РѕСЃС‚Р°РІС€РёС…СЃСЏ СЃС‚СѓРґРµРЅС‚РѕРІ
 	for (i = N; i >k+1 ; i--)
 
 	{
 		student_sort[i] = student_sort[i-1];
 	}
-	cout << "Введите фамилию, имя и отчество: ";
+	cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ, РёРјСЏ Рё РѕС‚С‡РµСЃС‚РІРѕ: ";
 	cin >> student_sort[k+1].surname >> student_sort[k+1].name >> student_sort[k+1].surname3;
 
-	cout << "Введите номер телефона: ";
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°: ";
 	cin >> student_sort[k+1].nomertel;
 	
-	cout << "Введите номер группы: ";
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РіСЂСѓРїРїС‹: ";
 	cin>>student_sort[k+1].group;
 
-	cout << "Введите оценки студента: ";
+	cout << "Р’РІРµРґРёС‚Рµ РѕС†РµРЅРєРё СЃС‚СѓРґРµРЅС‚Р°: ";
 	cin >> student_sort[k+1].mark1>> student_sort[k+1].mark2>>student_sort[k+1].mark3;
 
 	for (i = 0; i <= N; i++)
 	{
 		if (student_sort[i].mark1!= 0)
 		{
-			cout << "Фамилия Имя Отчество| " << student_sort[i].surname << " " << student_sort[i].name << " " << student_sort[i].surname3 << endl;
+			cout << "Р¤Р°РјРёР»РёСЏ РРјСЏ РћС‚С‡РµСЃС‚РІРѕ| " << student_sort[i].surname << " " << student_sort[i].name << " " << student_sort[i].surname3 << endl;
 
-			cout << "Номер телефона| " << student_sort[i].nomertel<< endl;
+			cout << "РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°| " << student_sort[i].nomertel<< endl;
 
-			cout << "Группа| " << student_sort[i].group<< endl;
+			cout << "Р“СЂСѓРїРїР°| " << student_sort[i].group<< endl;
 
-			cout << "Три оценки| " << student_sort[i].mark1 <<" "<< student_sort[i].mark2 <<" "<< student_sort[i].mark3 << endl;
+			cout << "РўСЂРё РѕС†РµРЅРєРё| " << student_sort[i].mark1 <<" "<< student_sort[i].mark2 <<" "<< student_sort[i].mark3 << endl;
 		}
 	}
 	system("pause");
