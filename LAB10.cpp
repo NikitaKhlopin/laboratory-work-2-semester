@@ -16,7 +16,7 @@ int main()
     int raz, k;
     cout << "Введите кол-во элементов: ";
     cin >> raz;
-    string * mass1 = new string[raz]; //Создаем динамический массив
+    string * mass1 = new string[raz]; // Создаем динамический массив
 
     for (int i = 0; i < raz; i++)
     {
