@@ -3,15 +3,15 @@
 using namespace std;
 
 struct List
-{ //Структура
+{ //РЎС‚СЂСѓРєС‚СѓСЂР°
 	char data;
 	List* next;
 };
 
 List* add(int size) 
-{ //Ввод
+{ //Р’РІРѕРґ
 	
-	if (size == 0)
+	if (size == NULL)
 	{
 		cout<<"Error!:"<<endl;
 		return 0;
@@ -21,7 +21,7 @@ List* add(int size)
 	first = NULL;
 	p = new List;
 	
-	cout<<"Введите элементы списка: ";
+	cout<<"Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ СЃРїРёСЃРєР°: ";
 	cin>>p->data;
 	first = p;
 	
@@ -31,16 +31,16 @@ List* add(int size)
 		p->next = h;
 		p = p->next;
 		cin>>p->data;
-		p->next = NULL;//Послдений элемент== 0
+		p->next = NULL;//РџРѕСЃР»РґРµРЅРёР№ СЌР»РµРјРµРЅС‚== 0
 	}
-	return first;//возвращает 1 элемент
+	return first;//РІРѕР·РІСЂР°С‰Р°РµС‚ 1 СЌР»РµРјРµРЅС‚
 }
 
 void print(List* first) 
-{ // Вывод
+{ // Р’С‹РІРѕРґ
 	if (first == NULL) 
 	{
-		cout<<"Новый список: "<<endl;
+		cout<<"РќРѕРІС‹Р№ СЃРїРёСЃРѕРє: "<<endl;
 	}
 	else 
 	{
@@ -55,11 +55,11 @@ void print(List* first)
 }
 
 void add(List*& first, int n) 
-{ //Ввод2
+{ //Р’РІРѕРґ2
 	List* p = first;
 	List* h = new List;
 	
-	cout << "Введите " << n << " элемента(ов): ";
+	cout << "Р’РІРµРґРёС‚Рµ " << n << " СЌР»РµРјРµРЅС‚Р°(РѕРІ): ";
 	cin >> h->data;
 	
 	h->next = p;
@@ -84,18 +84,18 @@ int main()
 	setlocale(LC_ALL, "Rus");
 	
 	int size;
-	cout<<"Введите размер списка: ";
+	cout<<"Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ СЃРїРёСЃРєР°: ";
 	cin>>size;
 	
 	List* list = add(size);
 	
-	cout<<"Список: ";
-	print(list);//Выводим список
+	cout<<"РЎРїРёСЃРѕРє: ";
+	print(list);//Р’С‹РІРѕРґРёРј СЃРїРёСЃРѕРє
 	
-	add(list, size);//Добавляем элементы в нечетные позиции
+	add(list, size);//Р”РѕР±Р°РІР»СЏРµРј СЌР»РµРјРµРЅС‚С‹ РІ РЅРµС‡РµС‚РЅС‹Рµ РїРѕР·РёС†РёРё
 	
-	cout << "Изменённый список: ";
-	print(list);//Снова выводим список
+	cout << "РР·РјРµРЅС‘РЅРЅС‹Р№ СЃРїРёСЃРѕРє: ";
+	print(list);//РЎРЅРѕРІР° РІС‹РІРѕРґРёРј СЃРїРёСЃРѕРє
 	
 	return 0;
 }
