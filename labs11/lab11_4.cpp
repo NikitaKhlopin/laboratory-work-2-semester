@@ -6,14 +6,14 @@ using namespace std;
 			queue* next;
 		};
 
-		queue* make_queue(int n, queue * &first, queue * &last) // Создание очереди
+		queue* make_queue(int n, queue * &first, queue * &last) // РЎРѕР·РґР°РЅРёРµ РѕС‡РµСЂРµРґРё
 		{
 			if (n == 0) 
 				return NULL;
 			queue* p = new queue;
 			
 			int a;
-			cout <<"Введите элеметы очереди: ";
+			cout <<"Р’РІРµРґРёС‚Рµ СЌР»РµРјРµС‚С‹ РѕС‡РµСЂРµРґРё: ";
 			cin >> a;
 			
 			p->data = a;
@@ -44,7 +44,7 @@ using namespace std;
 			return last;
 		}
 
-		void print(queue * last) // Вывод
+		void print(queue * last) // Р’С‹РІРѕРґ
 		{
 			queue* p = last;
 			
@@ -102,7 +102,7 @@ using namespace std;
 		{
 			setlocale(LC_ALL, "Rus");
 			
-			cout<<"Введите кол-во элементов в стеке: ";
+			cout<<"Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃС‚РµРєРµ: ";
 			int n;
 			int k;
 			cin >> n;
@@ -111,7 +111,7 @@ using namespace std;
 			
 			make_queue(n, first, last);
 
-			cout << "Очередь: ";
+			cout << "РћС‡РµСЂРµРґСЊ: ";
 			print(last);
 			
 			int* arr = new int[n];
@@ -135,7 +135,7 @@ using namespace std;
 				}
 			}
 
-			cout << "Очередь после удаления: ";
+			cout << "РћС‡РµСЂРµРґСЊ РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ: ";
 			print(last);
 			
 			return 0;
