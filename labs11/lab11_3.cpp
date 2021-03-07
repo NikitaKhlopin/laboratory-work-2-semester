@@ -19,7 +19,7 @@ stack* sozd_stack(int n)
 	top = NULL;
 	p = new stack;
 	
-	cout << "Ââåäèòå ýëåìåíòû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹: ";
 	cin >> a;
 	p->data = a;
 	p->prev = NULL;
@@ -41,7 +41,7 @@ void print(stack* top)
 {
 	if (top == NULL)
 	{
-		cout << "Ñòåê ïóñò" << endl;
+		cout << "Ð¡Ñ‚ÐµÐº Ð¿ÑƒÑÑ‚" << endl;
 	}
 	
 	else 
@@ -62,7 +62,7 @@ void add(stack*& first, int n)
 	stack* p = first;
 	stack* h = new stack;
 	
-	cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ";
 	cin >> h->data;
 	h->prev = p;
 	first = h;
@@ -71,7 +71,7 @@ void add(stack*& first, int n)
 	{
 		stack* h = new stack;
 		
-		cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: ";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ";
 		cin >> h->data;
 		h->prev = p->prev;
 		p->prev = h;
@@ -90,19 +90,18 @@ void add(stack*& first, int n)
 int main()
 {
 	setlocale(LC_ALL, "Rus");
-	cout<<"Ââåäèòå êîë-âî ýëåìåíòîâ: ";
+	cout<<"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
 	int n;
 	cin >> n;
 	stack* st = sozd_stack(n);
-	cout << "Ñòåê: ";
+	cout << "Ð¡Ñ‚ÐµÐº: ";
 	print(st);
 	add(st, n);
 	
-	cout << "Èçìåí¸ííûé ñòåê: ";
+	cout << "Ð˜Ð·Ð¼ÐµÐ½Ñ‘Ð½Ð½Ñ‹Ð¹ ÑÑ‚ÐµÐº: ";
 	print(st);
 	return 0;
 }
-
 
 
 
