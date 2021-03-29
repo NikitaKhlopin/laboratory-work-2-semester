@@ -4,7 +4,7 @@ using namespace std;
 
 int n;
 
-void mergeSortRec(int* v, int r, int t) //Метод ествественного слияния
+void mergeSortRec(int* v, int r, int t) //РњРµС‚РѕРґ РµСЃС‚РІРµСЃС‚РІРµРЅРЅРѕРіРѕ СЃР»РёСЏРЅРёСЏ
 {
 	int p = 1;
 	int k = 1;
@@ -87,8 +87,8 @@ void mergeSort1(int* v, int r, int i)
 {
 	if (i < r)
 	{
-		mergeSortRec(v, r, i); //Функция сортировки
-		mergeSort1(v, r, i + 1); //Рекурсия
+		mergeSortRec(v, r, i); //Р¤СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё
+		mergeSort1(v, r, i + 1); //Р РµРєСѓСЂСЃРёСЏ
 	}
 }
 
@@ -373,14 +373,14 @@ int main()
 
 	setlocale(LC_ALL, "rus");
 
-	cout << "Введите количество элементов: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ: ";
 	cin >> n;
 
 	srand(time(NULL));
 
 	int* arr = new int[n];
 
-	cout << "Массив: "<<endl;
+	cout << "РњР°СЃСЃРёРІ: "<<endl;
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand() / 100;
@@ -389,11 +389,11 @@ int main()
 
 	int menu = -1;
 
-	cout << endl << "Методы " << endl;
-	cout << "1) сортировка методом естественного слияния" << endl;
-	cout << "2) сортировка сбалансированным слиянием" << endl;
-	cout << "3) сортировка многофазным слиянием" << endl;
-	cout << "Метод, который нужен: ";
+	cout << endl << "РњРµС‚РѕРґС‹ " << endl;
+	cout << "1) СЃРѕСЂС‚РёСЂРѕРІРєР° РјРµС‚РѕРґРѕРј РµСЃС‚РµСЃС‚РІРµРЅРЅРѕРіРѕ СЃР»РёСЏРЅРёСЏ" << endl;
+	cout << "2) СЃРѕСЂС‚РёСЂРѕРІРєР° СЃР±Р°Р»Р°РЅСЃРёСЂРѕРІР°РЅРЅС‹Рј СЃР»РёСЏРЅРёРµРј" << endl;
+	cout << "3) СЃРѕСЂС‚РёСЂРѕРІРєР° РјРЅРѕРіРѕС„Р°Р·РЅС‹Рј СЃР»РёСЏРЅРёРµРј" << endl;
+	cout << "РњРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ РЅСѓР¶РµРЅ: ";
 	
 	while (menu < 1 || menu > 3)
 
@@ -401,13 +401,16 @@ int main()
 		cin >> menu;
 	}
 
-	if (menu == 1) mergeSort1(arr, n, 0); ;
+	if (menu == 1) 
+		mergeSort1(arr, n, 0); ;
 
-	if (menu == 2) MergeSort(arr, 0, n - 1);
+	if (menu == 2) 
+		MergeSort(arr, 0, n - 1);
 
-	if (menu == 3) MergeSort3(arr);
+	if (menu == 3) 
+		MergeSort3(arr);
 	
-	cout << endl << "Массив после сортировки: " << endl;
+	cout << endl << "РњР°СЃСЃРёРІ РїРѕСЃР»Рµ СЃРѕСЂС‚РёСЂРѕРІРєРё: " << endl;
 	
 	for (int i = 0; i < n; i++)
 	{
