@@ -20,5 +20,9 @@ void fraction::show() {
 }
 
 double fraction::root(double q) {
-	return (q-second)/first;
+	if (first != 0)
+	{
+		return (q - second) / first;
+	}
+	else cout << "EROR!!!!!!!!!!!!!!404!404!404! ";
 }
