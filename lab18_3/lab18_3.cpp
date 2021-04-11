@@ -1,6 +1,7 @@
 #include "money.h" 
 #include <iostream> 
 using namespace std;
+
 void main()
 {
 	setlocale(LC_ALL, "Rus");
@@ -10,12 +11,12 @@ void main()
 	money d;
 	cin >> a;
 	cin >> b;
-	cout << "Ïåðâàÿ ñóììà äåíåã:" << a << endl;
-	cout << "Âòîðàÿ ñóììà äåíåã:" << b << endl;
+	cout << "ÐŸÐµÑ€Ð²Ð°Ñ ÑÑƒÐ¼Ð¼Ð° Ð´ÐµÐ½ÐµÐ³:" << a << endl;
+	cout << "Ð’Ñ‚Ð¾Ñ€Ð°Ñ ÑÑƒÐ¼Ð¼Ð° Ð´ÐµÐ½ÐµÐ³:" << b << endl;
 	c = a + b;
 	d = a - b;
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
-	cout << "Ñëîæåíèå c = " << c << endl;
-	cout << "Âû÷èòàíèå d = " << d << endl;
+	cout << "Ð¡Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ c = " << c << endl;
+	cout << "Ð’Ñ‹Ñ‡Ð¸Ñ‚Ð°Ð½Ð¸Ðµ d = " << d << endl;
 }
