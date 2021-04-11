@@ -33,9 +33,9 @@ money money::operator - (const money& t)
 
 istream& operator>>(istream& in, money& t)
 {
-	cout << "Ââåäèòå ğóáëè:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ€ÑƒĞ±Ğ»Ğ¸: ";
 	cin >> t.rub;
-	cout << "Ââåäèòå êîïåéêè:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ğ¿ĞµĞ¹ĞºĞ¸: ";
 	cin >> t.pen;
 	return in;
 }
